@@ -1,5 +1,7 @@
 import turtle
-from create_ball import new_ball
+import random
+
+colors = ["red", "green", "blue", "white", "pink", "purple", "yellow", "grey", "brown", "cyan", "magneta"]
 
 ### Create Turtle Screen ###
 
@@ -19,6 +21,23 @@ o.goto(0, -300)
 o.pendown()
 o.circle(300)
 
-new_ball()
+### Create a new ball ###
+
+balls = []
+
+ball = turtle.Turtle()
+ball.penup()
+ball.shape("circle")
+ball.shapesize(0.5, 0.5)
+ball.color(random.choice(colors))
+ball.setheading(random.randint(0, 360))
+balls.append(ball)
+
+### Move ball ###
+while True:
+    for ball in balls:
+        ball.forward(1)
+
+
 
 screen.mainloop()
