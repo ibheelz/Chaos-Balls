@@ -1,4 +1,5 @@
 import turtle
+from create_ball import new_ball
 
 ### Create Turtle Screen ###
 
@@ -17,5 +18,7 @@ o.penup()
 o.goto(0, -300)
 o.pendown()
 o.circle(300)
+
+new_ball()
 
 screen.mainloop()
